@@ -13,7 +13,7 @@ Quero cotar plano ${plano}.
 Meu WhatsApp: ${telefone}
   `;
 
-  const numeroWhatsApp = "55SEUNUMEROAQUI";
+  const numeroWhatsApp = "5521965768924";
 
   const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensagem)}`;
 
