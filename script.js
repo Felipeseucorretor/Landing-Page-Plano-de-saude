@@ -6,12 +6,7 @@ document.getElementById("leadForm").addEventListener("submit", function(e) {
   const idade = document.getElementById("idade").value;
   const plano = document.getElementById("tipoPlano").value;
 
-  const mensagem = `
-Olá, me chamo ${nome}.
-Tenho ${idade} anos.
-Quero cotar plano ${plano}.
-Meu WhatsApp: ${telefone}
-  `;
+  const mensagem = `Olá, me chamo ${nome}. Tenho ${idade} anos. Quero cotar plano ${plano}. Meu WhatsApp: ${telefone}`;
 
   const numeroWhatsApp = "5521965768924";
 
