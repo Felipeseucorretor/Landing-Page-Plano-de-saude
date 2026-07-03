@@ -1,19 +1,105 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Plano de Saúde | Atendimento Rápido</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plano de Saúde | Cotação Rápida</title>
 
-  <!-- CSS SEMPRE no <head> -->
-  <link rel="stylesheet" href="style.css">
+<style>
+body {
+  font-family: Arial;
+  margin: 0;
+  background: #f4f6f8;
+}
+
+.header {
+  background: #1e88e5;
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.header img {
+  width: 100%;
+  max-width: 320px;
+  border-radius: 10px;
+  margin-top: 15px;
+}
+
+.container {
+  max-width: 400px;
+  margin: -30px auto 0;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+input, select, button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+}
+
+button {
+  background: #1e88e5;
+  color: white;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.benefits {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+</style>
 </head>
 
 <body>
 
-  <h1>Simule seu Plano de Saúde</h1>
-  <p>Preencha e receba atendimento no WhatsApp</p>
+<div class="header">
+  <h1>Plano de Saúde com Cotação Rápida</h1>
+  <p>Receba atendimento direto no WhatsApp</p>
 
-  <!-- JS SEMPRE antes de fechar o body -->
-  <script src="script.js"></script>
+  <!-- IMAGEM (você pode trocar depois) -->
+  <img src="familia.jpg" alt="Família feliz">
+</div>
+
+<div class="container">
+
+  <div class="benefits">
+    ✔ Planos individuais e familiares<br>
+    ✔ Atendimento no Rio de Janeiro<br>
+    ✔ Sem burocracia
+  </div>
+
+  <form onsubmit="enviar(); return false;">
+    <input type="text" id="nome" placeholder="Seu nome" required>
+    <input type="tel" id="tel" placeholder="WhatsApp" required>
+    <input type="number" id="idade" placeholder="Idade" required>
+
+    <select id="plano">
+      <option>Individual</option>
+      <option>Familiar</option>
+      <option>Empresarial</option>
+    </select>
+
+    <button>Quero minha cotação</button>
+  </form>
+</div>
+
+<script>
+function enviar() {
+  let nome = document.getElementById("nome").value;
+  let tel = document.getElementById("tel").value;
+  let idade = document.getElementById("idade").value;
+  let plano = document.getElementById("plano").value;
+
+  let msg = `Olá, me chamo ${nome}, tenho ${idade} anos e quero cotar plano ${plano}. Meu WhatsApp: ${tel}`;
+
+  window.open("https://wa.me/55SEUNUMEROAQUI?text=" + encodeURIComponent(msg));
+}
+</script>
+
 </body>
 </html>
