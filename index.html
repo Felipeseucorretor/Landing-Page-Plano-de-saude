@@ -97,9 +97,12 @@ function enviar() {
 
   let msg = `Olá, me chamo ${nome}, tenho ${idade} anos e quero cotar plano ${plano}. Meu WhatsApp: ${tel}`;
 
- window.open(url, "_blank");
+  let numero = "5521965768924"; // <-- COLOQUE SEU NÚMERO AQUI (DDD + número, sem espaços)
+
+  let url = "https://wa.me/" + numero + "?text=" + encodeURIComponent(msg);
+
+  window.open(url, "_blank");
 }
 </script>
-
 </body>
 </html>
