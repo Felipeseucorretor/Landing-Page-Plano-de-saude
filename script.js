@@ -12,5 +12,5 @@ document.getElementById("leadForm").addEventListener("submit", function(e) {
 
   const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensagem)}`;
 
-  window.open(url, "_blank");
+ window.location.href = url;
 });
