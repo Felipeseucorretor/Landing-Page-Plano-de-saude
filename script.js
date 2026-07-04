@@ -1,16 +1,15 @@
 <script>
 function enviar() {
-  const nome = document.getElementById("nome").value;
-  const tel = document.getElementById("tel").value;
-  const idade = document.getElementById("idade").value;
-  const plano = document.getElementById("plano").value;
+  let nome = document.getElementById("nome").value;
+  let tel = document.getElementById("tel").value;
+  let idade = document.getElementById("idade").value;
+  let plano = document.getElementById("plano").value;
 
-  const msg = `Olá, me chamo ${nome}. Tenho ${idade} anos. Quero cotar o plano ${plano}. Meu WhatsApp é ${tel}.`;
+  let msg = `Olá, me chamo ${nome}, tenho ${idade} anos e quero cotar o plano ${plano}. Meu WhatsApp: ${tel}`;
 
-  const numeroWhatsApp = "5521965768924"; // SEU NÚMERO AQUI
-
-  const url = "https://wa.me/" + numeroWhatsApp + "?text=" + encodeURIComponent(msg);
-
-  window.location.href = url;
+  window.open(
+    "https://wa.me/5521965768924?text=" + encodeURIComponent(msg),
+    "_blank"
+  );
 }
 </script>
